@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205191530) do
+ActiveRecord::Schema.define(version: 20150205231841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,22 +26,22 @@ ActiveRecord::Schema.define(version: 20150205191530) do
   add_index "campers", ["name"], name: "index_campers_on_name", using: :btree
   add_index "campers", ["trip_id"], name: "index_campers_on_trip_id", using: :btree
 
-  create_table "equipments", force: :cascade do |t|
+  create_table "equipment", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "equipments", ["name"], name: "index_equipments_on_name", using: :btree
+  add_index "equipment", ["name"], name: "index_equipment_on_name", using: :btree
 
   create_table "needs", force: :cascade do |t|
     t.boolean  "taken"
     t.string   "importance"
     t.integer  "trip_id"
     t.integer  "camper_id"
-    t.integer  "eqipment_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "equipment_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "needs", ["importance"], name: "index_needs_on_importance", using: :btree
