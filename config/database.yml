@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: camp_together_development
+
+test:
+  adapter: postgresql
+  database: camp_together_test
