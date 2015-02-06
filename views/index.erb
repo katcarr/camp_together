@@ -1,0 +1,46 @@
+<h1 class="jumbotron masthead text-center">Camp Together</h1>
+
+
+<h3>Create a new account</h3>
+<div class="row">
+  <form action='/create_account' method="post" class="form-inline">
+
+    <div class="col-xs-3">
+      <label class="sr-only" for="login">Username or Email</label>
+      <input id="login" name="login_name" class="form-control" type="text" placeholder="Username or Email">
+    </div>
+
+    <div class="col-xs-3">
+      <label class="sr-only" for="password">Password</label>
+      <input id="password" name="password" class="form-control" type="text" placeholder="Password">
+    </div>
+
+    <div class="col-xs-3">
+      <label class="sr-only" for="password2">Password</label>
+      <input id="password2" name="password2" class="form-control" type="text" placeholder="Password Again">
+    </div>
+
+    <div class="col-xs-2">
+      <button type="submit" class="btn btn-default">Create Account</button>
+    </div>
+
+  </form>
+</div>
+
+
+
+<h3>Login</h3>
+<form action='/login' method='post' class="form-inline">
+  <div class="form-group">
+    <label class="sr-only" for="login">Username or Email</label>
+    <input id="login" name="login_name" class="form-control" type="text" placeholder="Username or Email">
+  </div>
+
+  <div class="form-group">
+    <label class="sr-only" for="password">Password</label>
+    <input id="password" name="password" class="form-control" type="text" placeholder="Password">
+  </div>
+
+  <button type="submit" class="btn btn-default">Log In</button>
+
+</form>
